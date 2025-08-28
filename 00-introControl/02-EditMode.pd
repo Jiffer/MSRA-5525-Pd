@@ -1,0 +1,10 @@
+#N canvas 250 246 632 428 12;
+#X text 72 34 Edit Mode Play / Performance Mode;
+#X obj 76 189 hsl 162 19 0 127 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 73 219 5 0 0 0 - - - 0;
+#X text 72 88 Cmd + E or go to Edit Menu > Edit Mode;
+#X text 71 139 The patch runs the same whether in Edit or Play mode. The difference is can you interact with or edit the patch;
+#X text 72 257 Can resize number boxes and get to Help in Edit mode;
+#X text 74 316 Also Right Click > Properties;
+#X text 73 369 See 2.2.3 on Tidying up;
+#X connect 1 0 2 0;
