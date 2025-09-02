@@ -1,33 +1,28 @@
-#N canvas 179 25 1101 667 12;
-#X floatatom 84 52 5 0 0 0 - - -;
-#X obj 84 75 send myFavoriteNumber;
-#X obj 83 151 receive myFavoriteNumber;
-#X floatatom 83 175 5 0 0 0 - - -;
-#X text 78 125 look ma \, no wires!;
-#X obj 383 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 383 66 s myPulse;
-#X obj 340 186 r myPulse;
-#X obj 340 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 423 187 r myPulse;
-#X obj 423 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 497 187 r myPulse;
-#X obj 497 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 384 42 metro 500;
-#X obj 680 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 680 97 s bigBang;
-#N canvas 0 25 970 621 theBigBang 0;
+#N canvas 179 38 1101 794 12;
+#X floatatom 107 72 5 0 0 0 - - - 0;
+#X obj 107 95 send myFavoriteNumber;
+#X obj 106 171 receive myFavoriteNumber;
+#X floatatom 106 195 5 0 0 0 - - - 0;
+#X text 101 145 look ma \, no wires!;
+#X obj 185 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 185 332 s myPulse;
+#X obj 100 368 r myPulse;
+#X obj 100 391 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 183 369 r myPulse;
+#X obj 183 392 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 257 369 r myPulse;
+#X obj 257 392 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 186 308 metro 500;
+#X obj 770 119 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 770 139 s bigBang;
+#N canvas 47 38 970 621 theBigBang 0;
 #X obj 321 67 r bigBang;
 #X obj 315 198 r bigBang;
 #X obj 303 13 noise~;
 #X obj 303 124 *~;
 #X obj 220 383 dac~;
 #X obj 301 291 bob~;
-#X floatatom 428 264 5 0 0 0 - - -;
+#X floatatom 428 264 5 0 0 0 - - - 0;
 #X obj 428 215 loadbang;
 #X msg 428 239 3;
 #N canvas 0 25 1008 713 AD-env 0;
@@ -60,7 +55,7 @@
 #X connect 5 0 1 0;
 #X restore 165 198 pd AD-env;
 #X obj 146 221 *~;
-#N canvas 0 25 1005 667 freqSweep 0;
+#N canvas 47 38 1005 667 freqSweep 0;
 #X obj 199 210 line~;
 #X obj 236 92 inlet;
 #X text 251 134 <- start value;
@@ -76,8 +71,8 @@
 #X connect 5 0 4 0;
 #X connect 6 0 0 0;
 #X restore 315 220 pd freqSweep;
-#X text 465 239 initial Q value;
 #X obj 128 152 osc~ 80;
+#X text 473 265 filter Q;
 #X connect 0 0 9 0;
 #X connect 1 0 13 0;
 #X connect 2 0 3 0;
@@ -93,27 +88,24 @@
 #X connect 12 0 4 0;
 #X connect 12 0 4 1;
 #X connect 13 0 5 1;
-#X connect 15 0 12 0;
-#X restore 681 142 pd theBigBang;
-#X obj 370 326 tgl 25 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
-1;
-#X floatatom 430 377 5 0 0 0 - - -;
-#X text 398 325 run/stop;
-#X text 470 375 time between ticks (ms);
-#X obj 370 471 s currentStep;
-#X obj 346 632 r currentStep;
-#X obj 345 655 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
-#X obj 370 401 metro 150;
+#X connect 14 0 12 0;
+#X restore 771 184 pd theBigBang;
+#X obj 403 429 tgl 25 0 empty empty empty 17 7 0 10 #c4fcfc #000000 #000000 0 1;
+#X floatatom 463 480 5 0 0 0 - - - 0;
+#X text 431 428 run/stop;
+#X text 503 478 time between ticks (ms);
+#X obj 403 574 s currentStep;
+#X obj 265 703 r currentStep;
+#X obj 264 726 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 403 504 metro 150;
 #N canvas 0 25 1180 766 my16Counter 0;
 #X obj 194 116 inlet;
 #X obj 230 260 i;
 #X obj 230 284 + 1;
-#X floatatom 275 283 5 0 0 0 - - -;
-#X floatatom 277 339 5 0 0 0 - - -;
+#X floatatom 275 283 5 0 0 0 - - - 0;
+#X floatatom 277 339 5 0 0 0 - - - 0;
 #X text 271 257 counter \, adds 1 each bang;
-#X text 315 308 modulo (%) calculates the remainder after division
-;
+#X text 315 308 modulo (%) calculates the remainder after division;
 #X msg 255 234 0;
 #X obj 276 312 % 16;
 #X obj 272 181 inlet;
@@ -129,17 +121,19 @@
 #X connect 7 0 1 1;
 #X connect 8 0 4 0;
 #X connect 9 0 7 0;
-#X restore 370 425 pd my16Counter;
-#X floatatom 370 449 5 0 0 0 - - -;
-#X obj 346 584 r currentStep;
-#X obj 345 607 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+#X restore 403 528 pd my16Counter;
+#X floatatom 403 552 5 0 0 0 - - - 0;
+#X obj 731 697 r currentStep;
+#X obj 730 720 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 77 583 r currentStep;
-#X obj 76 606 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
-#X obj 622 581 r currentStep;
-#X obj 621 604 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+#X obj 76 606 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 550 582 r currentStep;
+#X obj 549 605 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X text 83 8 send and receive or [s] and [r] can be used to connect objects with "invisible" wires;
+#X floatatom 264 746 5 0 0 0 - - - 0;
+#X floatatom 76 626 5 0 0 0 - - - 0;
+#X floatatom 730 740 5 0 0 0 - - - 0;
+#X floatatom 549 625 5 0 0 0 - - - 0;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 5 0 13 0;
@@ -151,9 +145,13 @@
 #X connect 17 0 24 0;
 #X connect 18 0 24 1;
 #X connect 22 0 23 0;
+#X connect 23 0 34 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 0;
 #X connect 26 0 21 0;
 #X connect 27 0 28 0;
+#X connect 28 0 36 0;
 #X connect 29 0 30 0;
+#X connect 30 0 35 0;
 #X connect 31 0 32 0;
+#X connect 32 0 37 0;

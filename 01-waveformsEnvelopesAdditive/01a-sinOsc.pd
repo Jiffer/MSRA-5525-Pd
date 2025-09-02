@@ -1,0 +1,9 @@
+#N canvas 1657 76 1430 949 12;
+#X obj 141 154 osc~ 300;
+#X obj 141 187 *~ 0.1;
+#X obj 141 233 dac~;
+#X text 220 185 <- scale output to 1/10th max level;
+#X text 139 41 [osc~] is a sine wave oscillator if the DSP is on you should hear 300 Hz tone Check the console to confirm if DSP is on/off. If you're not able to hear any sounds look for error messages in the console. You may need to restart Pd.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
