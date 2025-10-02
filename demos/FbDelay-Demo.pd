@@ -22,6 +22,7 @@
 #X text 374 49 Trigger an AD envelope;
 #X text 321 358 <- initial delay of 100 ms;
 #X text 84 548 ^- we hear both the initial sound and the delayed version;
+#X text 336 273 <- holds 1000 ms (1 sec) of audio;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 0 10 0;
