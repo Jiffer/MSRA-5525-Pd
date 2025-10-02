@@ -1,4 +1,4 @@
-#N canvas 2149 222 923 755 12;
+#N canvas 589 199 923 755 12;
 #X floatatom 143 219 5 0 0 0 - - - 0;
 #X text 410 338 < these numbers represent the notes to play it defines the scale;
 #X obj 146 29 hsl 100 25 0 25 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
@@ -38,6 +38,11 @@
 #X text 200 83 <- only update when value is changed;
 #X text 185 218 <- scale degree;
 #X text 255 31 note select;
+#X floatatom 610 83 5 0 0 0 - - - 0;
+#X floatatom 610 139 5 0 0 0 - - - 0;
+#X floatatom 658 138 5 0 0 0 - - - 0;
+#X obj 610 116 mod 12;
+#X obj 658 115 / 12;
 #X connect 0 0 11 0;
 #X connect 2 0 35 0;
 #X connect 4 0 17 0;
@@ -78,3 +83,7 @@
 #X connect 34 0 12 0;
 #X connect 34 0 13 0;
 #X connect 35 0 34 0;
+#X connect 39 0 42 0;
+#X connect 39 0 43 0;
+#X connect 42 0 40 0;
+#X connect 43 0 41 0;
