@@ -42,8 +42,8 @@
 #X obj 147 453 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 49 353 tabread myNotes;
 #X text 246 58 A collection of values can be stored in an array;
-#X text 34 265 This will set the values in the array myNotes;
 #X msg 36 214 \; myNotes 0 2 4 5 7 9 10 12 14 16 17 19 21 22 24 26 28 31 34 36 38, f 80;
+#X text 62 257 ^- This will set the values in the array myNotes;
 #X connect 2 0 17 0;
 #X connect 3 0 5 0;
 #X connect 4 0 18 0;
