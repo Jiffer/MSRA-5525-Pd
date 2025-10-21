@@ -1,5 +1,5 @@
 #N canvas 722 129 789 603 12;
-#N canvas 47 201 1465 733 part2 1;
+#N canvas 47 201 1465 733 part2 0;
 #X floatatom 108 49 5 0 0 0 - - - 0;
 #X floatatom 109 108 5 0 0 0 - - - 0;
 #X floatatom 167 110 5 0 0 0 - - - 0;
@@ -43,6 +43,7 @@
 #X msg 338 518 0.2 5 \, 0 200 5;
 #X obj 159 279 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 159 303 metro 300;
+#X floatatom 246 368 5 0 0 0 - - - 0;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
@@ -82,8 +83,9 @@
 #X connect 40 0 38 0;
 #X connect 41 0 42 0;
 #X connect 42 0 28 0;
+#X connect 43 0 26 1;
 #X restore 149 111 pd part2;
-#N canvas 47 212 1465 590 part1 0;
+#N canvas 47 212 1833 960 part1 0;
 #X obj 971 193 random 8;
 #X obj 972 242 select 0 1 2 3 4 5 6 7, f 35;
 #X floatatom 986 217 5 0 0 0 - - - 0;
@@ -217,7 +219,7 @@
 #X connect 63 0 57 0;
 #X connect 63 0 57 1;
 #X restore 149 57 pd part1;
-#N canvas 316 162 1126 667 part3 0;
+#N canvas 316 162 1209 964 part3 0;
 #X text 52 20 Random Walk;
 #X obj 49 100 random 3;
 #X obj 49 127 - 1;
@@ -295,7 +297,7 @@
 #X connect 24 0 8 0;
 #X connect 24 1 7 0;
 #X restore 543 512 pd stepWise-sub-patch;
-#N canvas 1930 284 450 300 AR-envelope-sub-patch 0;
+#N canvas 1470 284 450 300 AR-envelope-sub-patch 0;
 #X obj 104 126 line~;
 #X msg 104 74 1 5;
 #X obj 146 75 delay 25;

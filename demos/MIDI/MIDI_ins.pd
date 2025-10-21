@@ -1,4 +1,4 @@
-#N canvas 1572 57 1704 916 12;
+#N canvas -192 38 1465 916 12;
 #X obj 895 93 ctlin;
 #X floatatom 892 121 5 0 0 0 - - - 0;
 #X floatatom 933 121 5 0 0 0 - - - 0;
@@ -71,13 +71,13 @@
 #X obj 73 643 osc~;
 #X obj 139 578 / 127;
 #X msg 139 627 \$1 10 \, 0 500 10;
-#X obj 139 651 line~;
 #X floatatom 147 602 5 0 0 0 - - - 0;
 #X text 194 580 <- here velocity is scaled between 0-1;
 #X text 260 627 <- use that value in a volume envelope;
 #X obj 102 705 *~;
 #X obj 102 729 output~;
 #X text 665 65 CC input;
+#X obj 139 651 vline~;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 9 1;
@@ -123,9 +123,9 @@
 #X connect 64 0 70 0;
 #X connect 67 0 68 0;
 #X connect 68 0 69 0;
-#X connect 69 0 76 0;
+#X connect 69 0 75 0;
 #X connect 70 0 71 0;
-#X connect 70 0 73 0;
-#X connect 71 0 72 0;
-#X connect 72 0 76 1;
-#X connect 76 0 77 0;
+#X connect 70 0 72 0;
+#X connect 71 0 78 0;
+#X connect 75 0 76 0;
+#X connect 78 0 75 1;
